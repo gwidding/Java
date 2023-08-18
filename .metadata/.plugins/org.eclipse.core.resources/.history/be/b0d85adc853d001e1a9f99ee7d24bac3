@@ -1,0 +1,24 @@
+package Assignment1;
+
+public class DogEx {
+
+	public static void main(String[] args) {
+		String line = "|";
+		char slash = '\\';
+		char underbar = '_';
+		char backslash = '/';
+		char paren_l = '(';
+		char paren_r = ')';
+		char braces_l = '{';
+		char braces_r = '}';
+		System.out.println(line + slash + underbar + backslash + line);
+		System.out.println(line + "q p" + line + '\t' + backslash + braces_r);
+		System.out.println(paren_l + " 0 " + paren_r + "\"\"\"" + slash);
+		System.out.println(line + "\"^\"`" +'\t'  + line);
+		System.out.println(line + " " + line + underbar + backslash + '=' +slash + slash
+				+ underbar + underbar +line);
+		
+
+	}
+
+}

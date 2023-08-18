@@ -1,0 +1,12 @@
+package Assignment1;
+
+public class DogEx {
+
+	public static void main(String[] args) {
+		String line = "|";
+		char slash = '\\';
+		System.out.print(line + slash);
+
+	}
+
+}
