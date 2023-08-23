@@ -3,11 +3,13 @@ package midterm;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.text.DecimalFormat;
-
+import java.util.Scanner;
 public class M408 {
 	public static void main(String[] args) {
-		DecimalFormat df = new DecimalFormat("###,###");
-		int price = 180000;
+		Scanner s = new Scanner(System.in);
+		System.out.print("가격을 입력해 주세요: ");
+		int price = s.nextInt();
+
 		double sales = price / 1.1;
 		double vat = sales * 0.1;
 		LocalDateTime now = LocalDateTime.now();
@@ -28,6 +30,7 @@ public class M408 {
 		System.out.println("승인번호 40860059");
 		System.out.println("---------------------------------");
 		
+		DecimalFormat df = new DecimalFormat("###,###");
 		System.out.printf("판매금액:\t\t\t%s원\n", df.format(sales));
 		System.out.printf("부 가 세:\t\t\t %s원\n", df.format(vat));
 		System.out.printf("합   계:\t\t\t%s원", df.format(price));
