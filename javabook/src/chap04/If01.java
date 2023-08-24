@@ -14,5 +14,6 @@ public class If01 {
 			System.out.println("당신은 투표할 자격이 있습니다.");
 		}		
 		System.out.println("이 문장은 if문 외부에 있습니다.");
+		s.close();
 	}
 }

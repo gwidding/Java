@@ -22,6 +22,6 @@ public class Loop02 {
 			choice = s.nextInt();
 		}
 		System.out.println("모든 숫자를 확인했습니다.");
+		s.close();
 	}
-
 }

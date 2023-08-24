@@ -23,6 +23,7 @@ public class If04 {
 		else {
 			System.out.println(x + "는 가장 큰 정수가 아닙니다.");
 		}
+		s.close();
 	}
 
 }

@@ -15,6 +15,7 @@ public class Loop03 {
 			x--;
 		} while (x >= 10);
 		System.out.println("합계 : " + sum);
+		s.close();
 	}
 
 }

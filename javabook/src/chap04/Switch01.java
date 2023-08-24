@@ -27,6 +27,7 @@ public class Switch01 {
 			 System.out.println("F 학점");
 		 	 break;
 		 }
+		 s.close();
 	}
 
 }

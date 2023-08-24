@@ -24,5 +24,6 @@ public class If03 {
 		else {
 			System.out.println("F 학점");
 		}
+		s.close();
 	}
 }
