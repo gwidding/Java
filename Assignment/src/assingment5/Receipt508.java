@@ -62,10 +62,11 @@ public class Receipt508 {
 		int[] item_price = {item_price1, item_price2, item_price3};
 		int[] item_amount = {item_amount1, item_amount2, item_amount3};
 		
-
+		
 		item_name[i] = item_name[i].substring(0, 15); 
 		
-		System.out.printf("%s %12d  %d  %d\n[%s]\n", item_name[i], item_price[i], item_amount[i], item_price[i]*item_amount[i], item_code[i]);
+		System.out.printf("%s %12d  %d  %d\n[%s]\n", item_name[i], item_price[i], 
+				item_amount[i], item_price[i]*item_amount[i], item_code[i]);
 		price_total += item_price[i];
 
 	}
