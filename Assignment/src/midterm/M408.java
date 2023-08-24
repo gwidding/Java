@@ -34,5 +34,6 @@ public class M408 {
 		System.out.printf("판매금액:\t\t\t%s원\n", df.format(sales));
 		System.out.printf("부 가 세:\t\t\t %s원\n", df.format(vat));
 		System.out.printf("합   계:\t\t\t%s원", df.format(price));
+		s.close();
 	}
 }
