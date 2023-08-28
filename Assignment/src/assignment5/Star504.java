@@ -1,4 +1,4 @@
-package assingment5;
+package assignment5;
 
 public class Star504 {
 	public static void star() {
