@@ -24,13 +24,14 @@ public class Lotto611_1 {
 				System.out.println("추첨 결과 : " + ranking(myNum, lottoNum) + " 입니다.");
 			}
 			
-		}	
+		}
+		s.close();
 	}
 	
 	public static void generatorNum(int[] lottoNum) {
 		System.out.print("로또 당첨 번호 : ");
 		for (int i = 0; i < lottoNum.length; i++) {
-			lottoNum[i] = (int) (Math.random() * 1000 % 10 + 1);
+			lottoNum[i] = (int) (Math.random() * 1000 % 45 + 1);
 			if (i == 6) System.out.print("보너스+");
 			System.out.print(lottoNum[i] + " ");
 		}
