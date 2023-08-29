@@ -1,0 +1,11 @@
+package chap08;
+
+public class SubFather extends GrandFather{ // 부모 클래스(GrandFather의 자식)
+	String familyName = "프로그래머";
+	String houseAddress = "인천";
+	
+	void printFather() {
+		System.out.println("나는 아버지입니다! 나는 할아버지로부터 상속받습니다.");
+	}
+
+}
