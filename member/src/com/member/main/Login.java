@@ -10,9 +10,9 @@ public class Login {
 		
 		Scanner scan = new Scanner(System.in);
 		Admin admin = new Admin("admin", "1234", "은지");
-		MemberController memberController = new MemberController();
+		boolean login = true;
 		
-		while (true) {
+		while(login) {
 			System.out.println("****************************************************");
 			System.out.println("\t\t\t로그인");
 			System.out.println("****************************************************");
@@ -30,17 +30,17 @@ public class Login {
 					String pwd = scan.nextLine();
 
 					boolean pwdAgain = !pwd.equals(admin.getPwd());
-					// 다르면 true
+
 					if (pwdAgain) {
 						System.out.println("비밀번호가 틀렸습니다.");
 						i++;
-					}
+					} 
 					else {
 						System.out.println("로그인 성공");
 						Menu menu = new Menu();
 						menu.showMenu();
+						login = false;
 						break;
-						
 					}
 				}
 				
@@ -51,9 +51,7 @@ public class Login {
 			}
 			
 		}
-		
-		
-		
+		scan.close();
 	}
 }
 

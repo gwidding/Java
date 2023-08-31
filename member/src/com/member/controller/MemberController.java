@@ -13,7 +13,6 @@ public class MemberController extends ManageMember {
 	Scanner scan = new Scanner(System.in);
 	
 	public boolean createMember(String name, String phone) {
-		
 		System.out.print("등록하실 회원의 주소를 입력하세요: ");
 		String addr = scan.nextLine();
 		
@@ -27,29 +26,52 @@ public class MemberController extends ManageMember {
 	}
 	
 	
-	boolean readMember(int num) {
+	public boolean readMember(String name) {
+		int i = 0;
+		for (Member member : members) {
+			if (name.equals(member.getName()) ) {
+				System.out.println( name + " 고객 정보 : ");
+				System.out.println("회원 번호: " + member.getNum() + "\t이름: " + member.getName() 
+									+"\t 연락처: " + member.getPhone() + " \t주소: " + member.getAddr());				
+			}
+			else 
+				i++;			
+		}
+		
+		if (i >= members.size()) {
+			System.out.println(name + " 회원님이 존재하지 않습니다.");
+		}	
+		return false;
+	}
+
+	
+	public boolean updateMember(String name, String phone) {
+		
+		
+		
 		
 		return false;
 	}
 	
-	boolean updateMember(int num, String name, int phone) {
+	public boolean deleteMember(int num) {
 		return false;
 	}
 	
-	boolean deleteMember(int num) {
-		return false;
-	}
-	
-	boolean fileMember() {
+	public boolean fileMember() {
 		return false;
 	}
 	
 	
 	
 	public void listMember() {
-		System.out.println("회원목록==>>");
-		for (Member member : members) {
-			System.out.println("회원 번호 " + member.getNum() + "\t이름 " + member.getName() + " \t 연락처 " + member.getPhone());
+		System.out.println("\n----------------------<회원목록>----------------------");
+		if (members.size() == 0) {
+			System.out.println(" 등록된 회원이 없습니다.");
+		}
+		else {
+			for (Member member : members) {
+				System.out.println("회원 번호 " + member.getNum() + "\t이름 " + member.getName() + " \t 연락처 " + member.getPhone());
+			}
 		}
 	}
 
