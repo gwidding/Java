@@ -41,17 +41,34 @@ public class MemberController extends ManageMember {
 		if (i >= members.size()) {
 			System.out.println(name + " 회원님이 존재하지 않습니다.");
 		}	
-		return false;
+		return true;
 	}
 
 	
-	public boolean updateMember(String name, String phone) {
+	public boolean updateMember(String name, String newName, String newPhone) {
+		int i = 0;
+		for (Member member : members) {
+			if (name.equals(member.getName()) ) {
+				if (!(newName.equals(""))) {
+					member.setName(newName);
+				}
+				if (!(newPhone.equals(""))) {
+					member.setPhone(newPhone);
+				}
+				
+			}	
+			else 
+				i++;			
+		}
 		
-		
-		
-		
-		return false;
+		if (i >= members.size()) {
+			System.out.println(name + " 회원님이 존재하지 않습니다.");
+		}	
+		return true;
 	}
+	
+	
+	
 	
 	public boolean deleteMember(int num) {
 		return false;

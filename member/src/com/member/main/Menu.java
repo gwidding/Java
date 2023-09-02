@@ -50,7 +50,7 @@ public class Menu extends Login {
 				System.out.println("회원의 연락처를 수정하세요: ");
 				String newPhone = scan.nextLine();
 				
-				memberController.updateMember(newName, newPhone);
+				memberController.updateMember(name, newName, newPhone);
 				break;
 			}
 			case 4: {

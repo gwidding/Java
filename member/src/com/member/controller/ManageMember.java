@@ -6,7 +6,7 @@ public abstract class ManageMember {
 		
 	abstract boolean readMember(String name);
 	
-	abstract boolean updateMember(String name, String phone);
+	abstract boolean updateMember(String name, String newName, String newPhone);
 	
 	abstract boolean deleteMember(int num);
 	
