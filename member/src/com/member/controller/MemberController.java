@@ -69,9 +69,21 @@ public class MemberController extends ManageMember {
 	
 	
 	
-	
-	public boolean deleteMember(int num) {
-		return false;
+	public boolean deleteMember(String name) {
+		int i = 0;
+		for (Member member : members) {
+			if (name.equals(member.getName()) ) {
+				//member.remove();
+				
+			}
+			else 
+				i++;			
+		}
+		
+		if (i >= members.size()) {
+			System.out.println(name + " 회원님이 존재하지 않습니다.");
+		}	
+		return true;
 	}
 	
 	public boolean fileMember() {

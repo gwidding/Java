@@ -8,7 +8,7 @@ public abstract class ManageMember {
 	
 	abstract boolean updateMember(String name, String newName, String newPhone);
 	
-	abstract boolean deleteMember(int num);
+	abstract boolean deleteMember(String name);
 	
 	abstract boolean fileMember();
 	

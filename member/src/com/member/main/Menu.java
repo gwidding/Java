@@ -44,16 +44,24 @@ public class Menu extends Login {
 				System.out.print("수정할 회원 이름을 입력해주세요 ");
 				String name = scan.nextLine();
 				
-				System.out.println(name + " 회원의 이름을 수정하세요: ");
+				System.out.print(name + " 회원의 이름을 수정하세요: ");
 				String newName = scan.nextLine();
 				
-				System.out.println("회원의 연락처를 수정하세요: ");
+				System.out.print("회원의 연락처를 수정하세요: ");
 				String newPhone = scan.nextLine();
 				
 				memberController.updateMember(name, newName, newPhone);
 				break;
 			}
 			case 4: {
+				System.out.println("삭제할 회원 이름을 입력해주세요 : ");
+				String name = scan.nextLine();
+				
+				System.out.print("회원 비밀번호를 입력해주세요 : ");
+				String pwd = scan.nextLine();
+				
+				memberController.deleteMember(menu);
+				
 				
 				break;
 			}
