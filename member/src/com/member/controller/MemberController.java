@@ -13,6 +13,15 @@ public class MemberController extends ManageMember {
 	Scanner scan = new Scanner(System.in);
 	
 	public boolean createMember(String name, String phone) {
+		
+		// 이미 존재하는 회원 이름 예외처리
+		for (Member member : members) {
+			if (name.equals(member.getName())) {
+				System.out.println("이미 존재하는 이름입니다. 다른 이름으로 등록해주세요.");
+				return false;
+			}
+		}
+		
 		System.out.print("등록하실 회원의 주소를 입력하세요: ");
 		String addr = scan.nextLine();
 		
@@ -22,7 +31,7 @@ public class MemberController extends ManageMember {
 		Member newMember = new Member(memberNum, name, phone, addr, pwd);
 		members.add(newMember);
 		memberNum++;
-		// 이미 존재하는 회원 이름 예외처리
+		
 		return true;
 	}
 	
@@ -70,11 +79,14 @@ public class MemberController extends ManageMember {
 	
 	
 	
-	public boolean deleteMember(String name) {
+	public boolean deleteMember(String name, String pwd) {
 		int i = 0;
 		for (Member member : members) {
 			if (name.equals(member.getName()) ) {
-				//member.remove();
+				if (pwd.equals(member.getPwd())) {
+					members.remove(member.getNum()-1);
+					System.out.println("삭제되었습니다.");
+				}
 				
 			}
 			else 

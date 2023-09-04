@@ -1,7 +1,6 @@
 package com.member.main;
 
 import com.member.domain.Admin;
-import com.member.controller.MemberController;
 import java.util.Scanner;
 
 

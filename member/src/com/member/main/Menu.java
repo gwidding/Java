@@ -4,7 +4,7 @@ import java.util.Scanner;
 import com.member.controller.MemberController;
 
 public class Menu extends Login {
-	public static void showMenu() {
+	public void showMenu() {
 		Scanner scan = new Scanner(System.in);
 		MemberController memberController = new MemberController();
 		boolean run = true;
@@ -60,7 +60,7 @@ public class Menu extends Login {
 				System.out.print("회원 비밀번호를 입력해주세요 : ");
 				String pwd = scan.nextLine();
 				
-				memberController.deleteMember(name);
+				memberController.deleteMember(name, pwd);
 				
 				
 				break;
