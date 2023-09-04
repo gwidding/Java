@@ -22,6 +22,7 @@ public class MemberController extends ManageMember {
 		Member newMember = new Member(memberNum, name, phone, addr, pwd);
 		members.add(newMember);
 		memberNum++;
+		// 이미 존재하는 회원 이름 예외처리
 		return true;
 	}
 	

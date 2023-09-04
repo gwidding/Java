@@ -60,7 +60,7 @@ public class Menu extends Login {
 				System.out.print("회원 비밀번호를 입력해주세요 : ");
 				String pwd = scan.nextLine();
 				
-				memberController.deleteMember(menu);
+				memberController.deleteMember(name);
 				
 				
 				break;
