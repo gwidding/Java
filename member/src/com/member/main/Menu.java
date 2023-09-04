@@ -54,15 +54,13 @@ public class Menu extends Login {
 				break;
 			}
 			case 4: {
-				System.out.println("삭제할 회원 이름을 입력해주세요 : ");
+				System.out.print("삭제할 회원 이름을 입력해주세요 : ");
 				String name = scan.nextLine();
 				
 				System.out.print("회원 비밀번호를 입력해주세요 : ");
 				String pwd = scan.nextLine();
 				
-				memberController.deleteMember(name, pwd);
-				
-				
+				memberController.deleteMember(name, pwd);				
 				break;
 			}
 			case 5: {
@@ -70,7 +68,7 @@ public class Menu extends Login {
 				break;
 			}
 			case 6: {
-				
+				memberController.fileMember();
 				break;
 			}
 			case 7: {
