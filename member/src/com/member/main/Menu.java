@@ -2,11 +2,14 @@ package com.member.main;
 
 import java.util.Scanner;
 import com.member.controller.MemberController;
+import com.member.exception.ExceptScan;
 
 public class Menu extends Login {
 	public void showMenu() {
 		Scanner scan = new Scanner(System.in);
 		MemberController memberController = new MemberController();
+		ExceptScan exceptScan = new ExceptScan();
+		
 		boolean run = true;
 		
 		while (run) {
@@ -19,8 +22,8 @@ public class Menu extends Login {
 			System.out.println("****************************************************");
 			
 			System.out.print("메뉴 번호를 입력해 주세요 : ");
-			int menu = scan.nextInt();
-			scan.nextLine();
+			
+			int menu = exceptScan.scanInt();
 			
 			switch (menu) {
 			case 1: {
