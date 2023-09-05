@@ -99,7 +99,9 @@ public class MemberController extends ManageMember {
 			FileWriter fw = new FileWriter(file);
 			
 			for (Member member : members) {
-				fw.write("회원 번호: " + member.getNum() + "\t이름: " + member.getName() + " \t 연락처: " + member.getPhone() +"\t 비밀번호: " +member.getPwd() + "\n" );
+				fw.write("회원번호: " + member.getNum() + "\t이름: " + member.getName() 
+					+ " \t 연락처: " + member.getPhone() + "\t 주소: " + member.getAddr()
+					+"\t 비밀번호: " +member.getPwd() + "\n" );
 			}
 			fw.close();
 			System.out.println("파일 쓰기 성공");
@@ -117,7 +119,7 @@ public class MemberController extends ManageMember {
 		}
 		else {
 			for (Member member : members) {
-				System.out.println("회원 번호 " + member.getNum() + "\t이름 " + member.getName() + " \t 연락처 " + member.getPhone());
+				System.out.println("회원번호 " + member.getNum() + "\t이름 " + member.getName() + " \t 연락처 " + member.getPhone());
 			}
 		}
 	}
