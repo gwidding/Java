@@ -1,4 +1,4 @@
-package com.member.exception;
+package com.login.exception;
 
 import java.util.Scanner;
 

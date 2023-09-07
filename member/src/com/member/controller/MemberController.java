@@ -44,6 +44,7 @@ public class MemberController extends ManageMember {
 	public boolean readMember(String name) {
 		
 		Member member = exceptName.existMember(members, name);
+		
 		if (member != null) {
 			System.out.println(name + " 고객 정보 : ");
 			System.out.println("회원 번호: " + member.getNum() + "\t이름: " + member.getName() 
@@ -54,19 +55,28 @@ public class MemberController extends ManageMember {
 	}
 
 	
-	public boolean updateMember(String name, String newName, String newPhone) {
+	public boolean updateMember(String name, String pwd, String newName, String newPhone, String newAddr) {
 		Member member = exceptName.existMember(members, name);
 
 		if (member != null) {
-			if (!(newName.equals(""))) {
-				member.setName(newName);
+			if (!pwd.equals(member.getPwd())) {
+				System.out.println(name + " 회원의 비밀번호가 일치하지 않습니다.");
 			}
-			if (!(newPhone.equals(""))) {
-				member.setPhone(newPhone);
+			else {
+				if (!(newName.equals(""))) {
+					if (exceptName.exceptUpdateName(members, name, newName))
+						member.setName(newName);
+				}
+				if (!(newPhone.equals(""))) {
+					member.setPhone(newPhone);
+				}
+				if (!(newAddr.equals(""))) {
+					member.setAddr(newAddr);
+				}
+				System.out.println("기존의 " + name + " 회원님의 정보가 수정되었습니다.");
+				return true;				
 			}
 			
-			System.out.println("기존의 " + name + " 회원님의 정보가 수정되었습니다.");
-			return true;
 		}				
 	
 		return false;
@@ -74,7 +84,6 @@ public class MemberController extends ManageMember {
 	
 
 	public boolean deleteMember(String name, String pwd) {
-		
 		Member member = exceptName.existMember(members, name);
 		
 		if (member != null) {
@@ -119,7 +128,7 @@ public class MemberController extends ManageMember {
 		}
 		else {
 			for (Member member : members) {
-				System.out.println("회원번호 " + member.getNum() + "\t이름 " + member.getName() + " \t 연락처 " + member.getPhone());
+				System.out.println("회원번호 " + member.getNum()  + " \t이름: " + member.getName()  + "\t연락처: " + member.getPhone());
 			}
 		}
 	}

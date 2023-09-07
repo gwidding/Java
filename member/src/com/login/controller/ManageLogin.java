@@ -1,13 +1,10 @@
 package com.login.controller;
 
+import com.login.domain.Member;
+
 public interface ManageLogin {
-	abstract void readMember();
+	abstract Member loginId(String name);
 	
-	abstract void updateMember();
-	
-	abstract void deleteMember();
-	
-	abstract void readFileMember();
-	
-	abstract void writeFileMember();
+	abstract int loginPwd(Member member,String pwd, int i);
+
 }

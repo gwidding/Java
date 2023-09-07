@@ -44,8 +44,11 @@ public class Menu extends Login {
 				break;
 			}
 			case 3: {
-				System.out.print("수정할 회원 이름을 입력해주세요 ");
+				System.out.print("수정할 회원 이름을 입력해주세요:  ");
 				String name = scan.nextLine();
+				
+				System.out.print(name + " 회원의 비밀번호를 입력하세요: ");
+				String pwd = scan.nextLine();
 				
 				System.out.print(name + " 회원의 이름을 수정하세요: ");
 				String newName = scan.nextLine();
@@ -53,7 +56,10 @@ public class Menu extends Login {
 				System.out.print("회원의 연락처를 수정하세요: ");
 				String newPhone = scan.nextLine();
 				
-				memberController.updateMember(name, newName, newPhone);
+				System.out.print("회원의 주소를 수정하세요: ");
+				String newAddr = scan.nextLine();
+				
+				memberController.updateMember(name, pwd, newName, newPhone, newAddr);
 				break;
 			}
 			case 4: {
@@ -80,7 +86,7 @@ public class Menu extends Login {
 				break;
 			}
 			default:
-				System.out.println("올바른 메뉴 번호를 입력하세요. 1-6");
+				System.err.println("올바른 메뉴 번호를 입력하세요. 1-6");
 			}
 			
 		}
