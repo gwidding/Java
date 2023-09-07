@@ -5,11 +5,14 @@ import java.util.Scanner;
 import com.login.controller.InfoController;
 import com.login.domain.EnrollFile;
 import com.login.domain.Member;
-import com.login.exception.ExceptScan;
+import com.login.exception.*;
 
 public class Menu extends Login {
 	InfoController infoCon;
 	EnrollFile enrollFile = new EnrollFile();
+	ExceptName exceptName = new ExceptName();
+	
+	
 	Scanner scan = new Scanner(System.in);
 	
 	 public Menu() {
@@ -18,8 +21,6 @@ public class Menu extends Login {
 	 
 	public void showMenu(Member member) {
 		enrollFile.readFile();
-		
-		
 		
 		boolean run = true;
 		while (run) {
@@ -49,7 +50,6 @@ public class Menu extends Login {
 				if (pwd.equals(member.getPwd()) ) {
 					System.out.print(member.getName() + " 회원의 수정할 이름을 입력하세요: ");
 					String newName = scan.nextLine();
-					// 이름 예외 처리
 					
 					System.out.print(member.getName() + " 회원의 수정할 연락처를 입력하세요: ");
 					String newPhone = scan.nextLine();
@@ -60,9 +60,14 @@ public class Menu extends Login {
 					System.out.print(member.getName() + "회원의 수정할 비밀번호를 입력하세요: ");
 					String newPwd = scan.nextLine();
 					
-					infoCon.updateMember(member, newName, newPhone, newAddr, newPwd);
+					if (exceptName.exceptUpdateName(member.getName(), newName )) {
+						infoCon.updateMember(member, newName, newPhone, newAddr, newPwd);
+						System.out.println("수정 완료되었습니다.");
+					}
+					
+					
 
-					System.out.println("수정 완료되었습니다.");
+					
 				}
 				else {
 					System.out.println("비밀번호가 일치하지 않습니다.");

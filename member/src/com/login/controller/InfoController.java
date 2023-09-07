@@ -20,7 +20,7 @@ public class InfoController implements ManageInfo {
 		
 	}
 	
-	public void updateMember(Member member, String newName,String newPhone,String newAddr,String newPwd) {
+	public void updateMember(Member member, String newName, String newPhone, String newAddr, String newPwd) {
 		if (!newName.equals("")) {
 			member.setName(newName);
 		}

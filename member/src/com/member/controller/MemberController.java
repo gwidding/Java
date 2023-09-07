@@ -78,7 +78,6 @@ public class MemberController extends ManageMember {
 			}
 			
 		}				
-	
 		return false;
 	}
 	
@@ -96,7 +95,18 @@ public class MemberController extends ManageMember {
 			return false;
 		}
 		return false;
-		
+	}
+	
+	public void listMember() {
+		System.out.println("\n----------------------<회원목록>----------------------");
+		if (members.size() == 0) {
+			System.out.println(" 등록된 회원이 없습니다.");
+		}
+		else {
+			for (Member member : members) {
+				System.out.println("회원번호 " + member.getNum()  + " \t이름: " + member.getName()  + "\t연락처: " + member.getPhone());
+			}
+		}
 	}
 	
 	
@@ -121,16 +131,6 @@ public class MemberController extends ManageMember {
 	}
 	
 
-	public void listMember() {
-		System.out.println("\n----------------------<회원목록>----------------------");
-		if (members.size() == 0) {
-			System.out.println(" 등록된 회원이 없습니다.");
-		}
-		else {
-			for (Member member : members) {
-				System.out.println("회원번호 " + member.getNum()  + " \t이름: " + member.getName()  + "\t연락처: " + member.getPhone());
-			}
-		}
-	}
+	
 
 }
