@@ -35,12 +35,11 @@ public class Login {
 						System.err.println("비밀번호 오류 횟수 초과입니다.");
 						System.out.println();
 					}
-					else if (i == 0) {
+					if (i == 0) {
 						System.out.println(" 로그인 성공");
 						Menu menu = new Menu();
 						menu.showMenu(memberInfo);
 						login = false;
-						// 메뉴
 						break;
 					}
 				}

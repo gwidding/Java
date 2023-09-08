@@ -5,6 +5,7 @@ import com.login.domain.Member;
 
 public class LoginController extends EnrollFile implements ManageLogin {
 	
+	@Override
 	public Member loginId(String name) {
 		super.readFile();
 		for (Member member : members) {
@@ -16,6 +17,7 @@ public class LoginController extends EnrollFile implements ManageLogin {
 		return null;
 	}
 	
+	@Override
 	public int loginPwd(Member member, String pwd, int i) {
 		if (pwd.equals(member.getPwd()) ) {
 			return 0;

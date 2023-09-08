@@ -5,7 +5,9 @@ import com.member.controller.MemberController;
 import com.member.exception.ExceptScan;
 
 public class Menu extends Login {
+	
 	public void showMenu() {
+		
 		Scanner scan = new Scanner(System.in);
 		MemberController memberController = new MemberController();
 		ExceptScan exceptScan = new ExceptScan();
@@ -53,7 +55,7 @@ public class Menu extends Login {
 				System.out.print(name + " 회원의 이름을 수정하세요: ");
 				String newName = scan.nextLine();
 				
-				System.out.println(name + " 회원의 비밀번호를 수정하세요(8-16자): ");
+				System.out.println(name + " 회원의 비밀번호를 수정하세요(4-16자): ");
 				String newPwd = scan.nextLine();
 				
 				System.out.print("회원의 연락처를 수정하세요: ");

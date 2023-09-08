@@ -18,13 +18,14 @@ public class InfoController implements ManageInfo {
         this.enrollFile = enrollFile;
     }
 	
+    @Override
 	public void readMember(Member member) {
 		System.out.println(member.getName() + " 고객 정보 : ");
 		System.out.println("회원 번호: " + member.getNum() + "\t이름: " + member.getName() 
 		+"\t 연락처: " + member.getPhone() + " \n주소: " + member.getAddr());
-		
 	}
 	
+    @Override
 	public void updateMember(Member member, String newName, String newPwd, String newPhone, String newAddr) {
 		List<Member> members = enrollFile.getMembers();
 		
@@ -58,6 +59,7 @@ public class InfoController implements ManageInfo {
 		enrollFile.writeFile();
 	}
 	
+    @Override
 	public boolean deleteMember(Member member, String ansDelete) {
 		if (ansDelete.equals("Y") || ansDelete.equals("y")) {
 			

@@ -20,13 +20,14 @@ public class MemberController extends ManageMember {
 	ExceptName exceptName = new ExceptName();
 	ExceptPwd exceptPwd = new ExceptPwd();
 	
+	@Override
 	public boolean createMember(String name, String phone) {
 		
 		if (exceptName.exceptCreateName(members, name)) {
 			System.out.print("등록하실 회원의 주소를 입력하세요: ");
 			String addr = scan.nextLine();
 			
-			System.out.print("등록하실 회원의 비밀번호를 입력하세요(8-16자): ");
+			System.out.print("등록하실 회원의 비밀번호를 입력하세요(4-16자): ");
 			String pwd = scan.nextLine();
 			pwd = exceptPwd.exceptpwd(pwd);	
 
@@ -42,6 +43,7 @@ public class MemberController extends ManageMember {
 	}
 	
 	
+	@Override
 	public boolean readMember(String name) {
 		Member member = exceptName.existMember(members, name);
 		
@@ -55,6 +57,7 @@ public class MemberController extends ManageMember {
 	}
 
 	
+	@Override
 	public boolean updateMember(String name, String pwd, String newName, String newPwd, String newPhone, String newAddr) {
 		Member member = exceptName.existMember(members, name);
 
@@ -87,6 +90,7 @@ public class MemberController extends ManageMember {
 	}
 	
 
+	@Override
 	public boolean deleteMember(String name, String pwd) {
 		Member member = exceptName.existMember(members, name);
 		
@@ -102,6 +106,7 @@ public class MemberController extends ManageMember {
 		return false;
 	}
 	
+	@Override
 	public void listMember() {
 		System.out.println("\n----------------------<회원목록>----------------------");
 		if (members.size() == 0) {
@@ -114,7 +119,7 @@ public class MemberController extends ManageMember {
 		}
 	}
 	
-	
+	@Override
 	public boolean fileMember() {
 		try {
 			File file = new File("memberList.txt");
@@ -135,7 +140,4 @@ public class MemberController extends ManageMember {
 		return true;
 	}
 	
-
-	
-
 }
