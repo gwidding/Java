@@ -57,7 +57,6 @@ public class EnrollFile {
 	                    + "\t비밀번호: " + member.getPwd() + "\n");
 	        }
 			fw.close();
-			System.out.println("파일 쓰기 성공");
 		} catch(Exception e) {
 			e.getMessage();
 		}

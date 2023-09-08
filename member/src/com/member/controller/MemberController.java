@@ -15,6 +15,7 @@ public class MemberController extends ManageMember {
 	
 	private List<Member> members = new ArrayList<>(); // Member의 객체들 저장하는 리스트 
 	private int memberNum = 1;
+	
 	Scanner scan = new Scanner(System.in);
 	ExceptName exceptName = new ExceptName();
 	ExceptPwd exceptPwd = new ExceptPwd();
@@ -25,7 +26,7 @@ public class MemberController extends ManageMember {
 			System.out.print("등록하실 회원의 주소를 입력하세요: ");
 			String addr = scan.nextLine();
 			
-			System.out.print("등록하실 회원의 비밀번호를 입력하세요: ");
+			System.out.print("등록하실 회원의 비밀번호를 입력하세요(8-16자): ");
 			String pwd = scan.nextLine();
 			pwd = exceptPwd.exceptpwd(pwd);	
 
@@ -42,7 +43,6 @@ public class MemberController extends ManageMember {
 	
 	
 	public boolean readMember(String name) {
-		
 		Member member = exceptName.existMember(members, name);
 		
 		if (member != null) {
@@ -55,7 +55,7 @@ public class MemberController extends ManageMember {
 	}
 
 	
-	public boolean updateMember(String name, String pwd, String newName, String newPhone, String newAddr) {
+	public boolean updateMember(String name, String pwd, String newName, String newPwd, String newPhone, String newAddr) {
 		Member member = exceptName.existMember(members, name);
 
 		if (member != null) {
@@ -66,6 +66,11 @@ public class MemberController extends ManageMember {
 				if (!(newName.equals(""))) {
 					if (exceptName.exceptUpdateName(members, name, newName))
 						member.setName(newName);
+				}
+				
+				if (!newPwd.equals("")) {
+					newPwd = exceptPwd.exceptUpdatePwd(newName);
+					member.setPwd(newPwd);
 				}
 				if (!(newPhone.equals(""))) {
 					member.setPhone(newPhone);
@@ -123,7 +128,7 @@ public class MemberController extends ManageMember {
 					+"\t 비밀번호: " +member.getPwd() + "\n" );
 			}
 			fw.close();
-			System.out.println("파일 쓰기 성공");
+			System.out.println("파일 저장 완료");
 		} catch(Exception e) {
 			e.getMessage();
 		}

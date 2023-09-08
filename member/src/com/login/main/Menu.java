@@ -10,8 +10,6 @@ import com.login.exception.*;
 public class Menu extends Login {
 	InfoController infoCon;
 	EnrollFile enrollFile = new EnrollFile();
-	ExceptName exceptName = new ExceptName();
-	
 	
 	Scanner scan = new Scanner(System.in);
 	
@@ -25,10 +23,10 @@ public class Menu extends Login {
 		boolean run = true;
 		while (run) {
 			System.out.println("****************************************************");
-			System.out.println("\t" + " 마이페이지 : " + member.getName() + "님 환영합니다.");
+			System.out.println("\t      마이페이지 : " + member.getName() + "님 환영합니다.");
 			System.out.println("****************************************************");
-			System.out.println(" 1. 회원 정보 확인하기 \t 2. 회원 정보 수정하기");
-			System.out.println(" 3. 회원 탈퇴        \t 4. 종료");
+			System.out.println("       1. 회원 정보 확인하기\t     2. 회원 정보 수정하기");
+			System.out.println("       3. 회원 탈퇴       \t     4. 종료");
 			System.out.println("****************************************************");
 			
 			System.out.print("메뉴 번호를 입력해 주세요 : ");
@@ -48,26 +46,22 @@ public class Menu extends Login {
 				String pwd = scan.nextLine();
 				
 				if (pwd.equals(member.getPwd()) ) {
+
 					System.out.print(member.getName() + " 회원의 수정할 이름을 입력하세요: ");
 					String newName = scan.nextLine();
+					
+					System.out.print(member.getName() + " 회원의 수정할 비밀번호를 입력하세요: ");
+					String newPwd = scan.nextLine();
 					
 					System.out.print(member.getName() + " 회원의 수정할 연락처를 입력하세요: ");
 					String newPhone = scan.nextLine();
 					
 					System.out.print(member.getName() + " 회원의 수정할 주소를 입력하세요: ");
-					String newAddr = scan.nextLine();
-					
-					System.out.print(member.getName() + "회원의 수정할 비밀번호를 입력하세요: ");
-					String newPwd = scan.nextLine();
-					
-					if (exceptName.exceptUpdateName(member.getName(), newName )) {
-						infoCon.updateMember(member, newName, newPhone, newAddr, newPwd);
-						System.out.println("수정 완료되었습니다.");
-					}
-					
-					
+					String newAddr = scan.nextLine();					
+	
+					infoCon.updateMember(member, newName, newPwd, newPhone, newAddr);
+					System.out.println("수정 완료되었습니다.");
 
-					
 				}
 				else {
 					System.out.println("비밀번호가 일치하지 않습니다.");
@@ -85,10 +79,8 @@ public class Menu extends Login {
 					String ansDelete = scan.nextLine();
 					
 					if (infoCon.deleteMember(member, ansDelete)) {
-
-
 			            run = false;
-			            System.out.println("정상적으로 탈퇴되어 프로그램을 종료합니다.");
+			            System.out.println("\n 정상적으로 탈퇴되어 프로그램을 종료합니다.");
 					}
 				}
 				else {
@@ -111,7 +103,6 @@ public class Menu extends Login {
 			}
 		}
 			
-	}
-		
+	}	
 
 }

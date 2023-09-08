@@ -4,15 +4,15 @@ import java.util.Scanner;
 
 public class ExceptPwd {
 	Scanner scan = new Scanner(System.in);
-	public String exceptpwd(String pwd) {
-		String newPwd = pwd;
-		while(newPwd.length() < 4 || newPwd.length() > 16) {
-			System.out.println(" 8-16자리로 입력해주세요.");
+	
+	public String exceptpwd(String name, String pwd) {
+		while(!pwd.equals("") && (pwd.length() < 4 || pwd.length() > 16)) {
+			System.err.println(" 비밀번호는 4-16자리로 입력해주세요.");
 			
-			System.out.print("등록하실 회원의 비밀번호를 입력하세요: ");
-			newPwd = scan.nextLine();
+			System.out.print(name + " 회원의 수정할 비밀번호를 입력하세요: ");
+			pwd = scan.nextLine();
 		}
-		return newPwd;
+		return pwd;
 		
 	}
 

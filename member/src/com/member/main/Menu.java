@@ -53,13 +53,16 @@ public class Menu extends Login {
 				System.out.print(name + " 회원의 이름을 수정하세요: ");
 				String newName = scan.nextLine();
 				
+				System.out.println(name + " 회원의 비밀번호를 수정하세요(8-16자): ");
+				String newPwd = scan.nextLine();
+				
 				System.out.print("회원의 연락처를 수정하세요: ");
 				String newPhone = scan.nextLine();
 				
 				System.out.print("회원의 주소를 수정하세요: ");
 				String newAddr = scan.nextLine();
 				
-				memberController.updateMember(name, pwd, newName, newPhone, newAddr);
+				memberController.updateMember(name, pwd, newName, newPwd, newPhone, newAddr);
 				break;
 			}
 			case 4: {

@@ -13,7 +13,7 @@ public class Login {
 		
 		while(login) {
 			System.out.println("****************************************************");
-			System.out.println("\t\t\t로그인");
+			System.out.println("\t\t   관리자 로그인");
 			System.out.println("****************************************************");
 			
 			System.out.print("아이디를 입력하세요: ");
@@ -44,7 +44,7 @@ public class Login {
 				}
 				
 				if (i == 3) {
-					System.out.println("로그인 횟수 초과");
+					System.err.println("비밀번호 오류 횟수 초과입니다.");
 					break;
 				}
 			}

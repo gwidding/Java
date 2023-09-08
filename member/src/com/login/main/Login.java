@@ -14,10 +14,10 @@ public class Login {
 			
 		while(login) {
 			System.out.println("****************************************************");
-			System.out.println("\t\t\t로그인");
+			System.out.println("\t\t      회원 로그인");
 			System.out.println("****************************************************");
 			
-			System.out.print("아이디를 입력하세요: ");
+			System.out.print("이름을 입력하세요: ");
 			String id = scan.nextLine();
 			
 			LoginController loginCon = new LoginController();
@@ -32,11 +32,11 @@ public class Login {
 					i = loginCon.loginPwd(memberInfo, pwd, i);
 					
 					if (i == 3) {
-						System.out.println("비밀번호 입력횟수 초과");
+						System.err.println("비밀번호 오류 횟수 초과입니다.");
 						System.out.println();
 					}
 					else if (i == 0) {
-						System.out.println("로그인 성공");
+						System.out.println(" 로그인 성공");
 						Menu menu = new Menu();
 						menu.showMenu(memberInfo);
 						login = false;
