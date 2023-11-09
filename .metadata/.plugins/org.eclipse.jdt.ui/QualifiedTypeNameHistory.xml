@@ -24,4 +24,8 @@
     <fullyQualifiedTypeName name="com.login.exception.ExceptScan"/>
     <fullyQualifiedTypeName name="com.login.domain.Member"/>
     <fullyQualifiedTypeName name="com.login.exception.ExceptName"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
+    <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSessionFactory"/>
 </qualifiedTypeNameHistroy>
