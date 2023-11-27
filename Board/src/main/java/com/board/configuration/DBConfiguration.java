@@ -21,7 +21,7 @@ import com.zaxxer.hikari.HikariDataSource;
 @PropertySource("classpath:/application.properties")
 public class DBConfiguration {
 	
-	// Bean낱개로 만든 객체를 한 곳에 모아두는 역할
+	//Bean 낱개로 만든 객체를 한 곳에 모아두는 역할
 	@Autowired
 	private ApplicationContext applicationContext;
 	// ApplicationContext는 스프링 컨테이너. Bean의 생명주기 관리
