@@ -9,7 +9,6 @@ import org.springframework.context.ApplicationContext;
 @SpringBootTest
 class BoardApplicationTests {
 	
-	// 잘 담겼는지 확인
 	@Autowired
 	private ApplicationContext context;
 	
