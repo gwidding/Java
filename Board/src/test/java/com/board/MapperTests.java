@@ -14,7 +14,7 @@ public class MapperTests {
 	private BoardMapper boardMapper;
 	
 	@Test
-	public void tdstOfInsert() {
+	public void testOfInsert() {
 		BoardDTO params = new BoardDTO();
 		params.setTitle("1번 게시글 제목");
 		params.setContent("1번 게시글 내용");
@@ -22,7 +22,6 @@ public class MapperTests {
 		
 		int result = boardMapper.insertBoard(params);
 		System.out.println("결과는 " + result + "입니다.");
-		
 		
 	}
 	
