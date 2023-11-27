@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
     <fullyQualifiedTypeName name="chap05.Example04"/>
     <fullyQualifiedTypeName name="java.nio.channels.NonWritableChannelException"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
@@ -28,4 +27,8 @@
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
     <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSessionFactory"/>
+    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="org.apache.ibatis.session.Configuration"/>
+    <fullyQualifiedTypeName name="com.board.mapper.BoradMapper"/>
 </qualifiedTypeNameHistroy>

@@ -12,7 +12,7 @@ public interface BoardMapper {
 	public BoardDTO selectBoardDetail(Long idx);
 	public int updateBoard(BoardDTO params);
 	public int deleteBoard(Long idx);
-	public List<BoardDTO> selecteBoardList();
+	public List<BoardDTO> selectBoardList();
 	public int selectBoardTotalCount();
 	
 }

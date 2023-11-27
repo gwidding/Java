@@ -67,7 +67,7 @@
 			idx = #{idx}
 	</update>
 	
-	<select id="selectBoard" parameterType="BoardDTO" resultType="BoardDTO">
+	<select id="selectBoardList" parameterType="BoardDTO" resultType="BoardDTO">
 		SELECT
 			<include refid="boardColumns" />
 		FROM
