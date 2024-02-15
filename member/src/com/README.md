@@ -15,8 +15,60 @@ Java와 객체 지향에 대해 공부하기 위해 콘솔창을 이용한 간�
 - 로그인
 - 정보 확인, 수정, 탈퇴
 
+## 프로젝트 폴더 구조
+```
+member
+│
+└── src
+    │
+    ├── com
+    │   │
+    │   ├── login
+    │   │   │
+    │   │   ├── controller
+    │   │   │   ├── infoController
+    │   │   │   ├── LoginController
+    │   │   │   └── ManageLogin
+    │   │   │
+    │   │   ├── domain
+    │   │   │   ├── EnrollFile
+    │   │   │   └── Member
+    │   │   │
+    │   │   ├── exception
+    │   │   │   ├── ExceptName
+    │   │   │   ├── ExceptPhone
+    │   │   │   ├── ExceptPwd
+    │   │   │   └── ExceptScan
+    │   │   │
+    │   │   └── main
+    │   │       ├── Login
+    │   │       └── Menu
+    │   │
+    │   └── member
+    │       │
+    │       ├── controller
+    │       │   ├── ManageMember
+    │       │   └── MemberController
+    │       │
+    │       ├── domain
+    │       │   ├── Admin
+    │       │   └── Member
+    │       │
+    │       ├── exception
+    │       │   ├── ExceptName
+    │       │   ├── ExceptPwd
+    │       │   └── ExceptScan
+    │       │
+    │       └── main
+    │           ├── Login
+    │           └── Menu
+    │
+    └── memberList.txt
+```
 
-## 화면별 기능
+
+
+## 화면별 기능 - 관리자
 
 <table>
  <tr>
@@ -93,5 +145,53 @@ Java와 객체 지향에 대해 공부하기 위해 콘솔창을 이용한 간�
 </tr>  
 </table>
 
-### 회원 기능
 
+## 화면별 기능 - 회원
+<table>
+ <tr>
+  <td><img src="https://github.com/gwidding/Java/assets/135992700/ec9e29ba-de82-4150-b71c-d03d7b6cf02e"></td>
+  <td>
+   <h3> 회원 로그인 </h3>
+   <li> 아이디, 비밀번호 일치 확인</li>
+   <li> 비밀번호 오류 횟수 3회</li>
+   <li> 성공 시 마이페이지 이동</li>
+  </td>
+ </tr>
+
+ <tr>
+  <td><img src="https://github.com/gwidding/Java/assets/135992700/86a0f6fe-6540-40b4-9b67-60c7875ed56b"></td>
+  <td>
+   <h3> 회원 정보 조회 </h3>
+   <li> 회원 번호, 이름, 연락처, 주소</li>
+  </td>
+ </tr>
+
+ <tr>
+  <td><img src="https://github.com/gwidding/Java/assets/135992700/cb63cddb-656e-4cae-89ae-ee20a14d98d4"></td>
+  <td>
+    <h3> 회원 정보 수정 </h3>
+    <li> 비밀번호 일치 확인</li>
+   <li> 비워두면 기존 정보 유지</li>
+   <li> 비밀번호 : 4~8자, 연락처 : 숫자만 허용</li>
+   <li> 이름 중복 불가</li>
+   <li> 수정 사항 txt 파일에 반영</li>
+  </td>
+  
+ </tr>
+  <td><img src="https://github.com/gwidding/Java/assets/135992700/8ea7e490-e687-4ba1-b148-3084159ab417">
+      <img src="https://github.com/gwidding/Java/assets/135992700/a3e817bd-c431-43ec-a1f0-1963a4cdc88d">
+  </td>
+  <td>
+   <h3> 회원 탈퇴</h3>
+   <li> 비밀번호 일치 확인</li>
+   <li> 탈퇴 여부 확인 N : 탈퇴 취소, Y : 탈퇴 진행</li>
+   <li> 탈퇴 사항 txt 파일에 반영</li>
+  </td>
+  
+ <tr>
+  <td><img src="https://github.com/gwidding/Java/assets/135992700/d493ac0e-14f6-400d-a6ef-60106fdf3c48"></td>
+  <td>
+   <h3> 프로그램 종료 </h3>
+  </td>
+ </tr>
+</table>
