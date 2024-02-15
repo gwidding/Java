@@ -6,14 +6,15 @@ Java와 객체 지향에 대해 공부하기 위해 콘솔창을 이용한 간�
 
 
 ## 주요 기능
-관리자
+관리자 [기능](https://github.com/gwidding/Java/blob/main/member/src/com/README.md#%ED%99%94%EB%A9%B4%EB%B3%84-%EA%B8%B0%EB%8A%A5---%EA%B4%80%EB%A6%AC%EC%9E%90)
 - 로그인
 - 회원 등록, 조회, 수정, 삭제, 목록
 - 고객 정보 파일 출력
 
-회원
+회원 [기능](https://github.com/gwidding/Java/tree/main/member/src/com#%ED%99%94%EB%A9%B4%EB%B3%84-%EA%B8%B0%EB%8A%A5---%ED%9A%8C%EC%9B%90)
 - 로그인
 - 정보 확인, 수정, 탈퇴
+
 
 ## 프로젝트 폴더 구조
 ```
@@ -66,8 +67,7 @@ member
     └── memberList.txt
 ```
 
-
-
+<br><br>
 ## 화면별 기능 - 관리자
 
 <table>
@@ -144,7 +144,7 @@ member
  </td>
 </tr>  
 </table>
-
+<br><br>
 
 ## 화면별 기능 - 회원
 <table>
